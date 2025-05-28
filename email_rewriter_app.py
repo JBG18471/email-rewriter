@@ -20,7 +20,7 @@ if st.button("🔁 Rewrite Email"):
 
             with st.spinner("Rewriting your email..."):
                 response = openai.chat.completions.create(
-                    model="gpt-4",
+                    model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": "You are a helpful assistant that rewrites emails in a business professional tone. Make them clear and concise."},
                         {"role": "user", "content": f"Rewrite this email:\n\n{email_input.strip()}"}
