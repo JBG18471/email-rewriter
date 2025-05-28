@@ -24,7 +24,7 @@ if st.button("🔁 Rewrite Email"):
 
             with st.spinner("Rewriting your email..."):
                 response = openai.ChatCompletion.create(
-                    model="gpt-4",  # Change to "gpt-3.5-turbo" if you want to use a cheaper model
+                    model="gpt-4",  # or "gpt-3.5-turbo" if you prefer
                     messages=[
                         {"role": "system", "content": "You are a helpful assistant that rewrites emails in a business professional tone. Make them clear and concise."},
                         {"role": "user", "content": f"Rewrite this email:\n\n{email_input.strip()}"}
@@ -39,3 +39,4 @@ if st.button("🔁 Rewrite Email"):
 
         except Exception as e:
             st.error(f"❌ Something went wrong: {e}")
+
